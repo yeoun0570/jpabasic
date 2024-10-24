@@ -12,12 +12,13 @@ import java.time.LocalDateTime;
 public class User {
     @Id
     private String email;
+
     private String name;
 
     @Column(name = "create_date")
     private LocalDateTime createDate;
 
-    protected User() {
+    public User() {
     }
 
     public User(String email, String name, LocalDateTime createDate) {
