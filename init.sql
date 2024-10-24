@@ -1,7 +1,7 @@
 create database jpabegin CHARACTER SET utf8mb4;
 
-CREATE USER 'jpauser'@'localhost' IDENTIFIED BY 'jpapass';
-CREATE USER 'jpauser'@'%' IDENTIFIED BY 'jpapass';
+CREATE USER 'userjpa'@'localhost' IDENTIFIED BY '1234';
+CREATE USER 'userjpa'@'%' IDENTIFIED BY '1234';
 
-GRANT ALL PRIVILEGES ON jpabegin.* TO 'jpauser'@'localhost';
-GRANT ALL PRIVILEGES ON jpabegin.* TO 'jpauser'@'%';
+GRANT ALL PRIVILEGES ON jpabegin.* TO 'userjpa'@'localhost';
+GRANT ALL PRIVILEGES ON jpabegin.* TO 'userjpa'@'%';

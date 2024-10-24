@@ -15,8 +15,8 @@
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <property name="jakarta.persistence.jdbc.url"
                       value="jdbc:mysql://localhost/jpabegin?characterEncoding=utf8"/>
-            <property name="jakarta.persistence.jdbc.user" value="jpauser"/>
-            <property name="jakarta.persistence.jdbc.password" value="jpapass"/>
+            <property name="jakarta.persistence.jdbc.user" value="userjpa"/>
+            <property name="jakarta.persistence.jdbc.password" value="1234"/>
 
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
             <property name="hibernate.hikari.poolName" value="pool"/>
