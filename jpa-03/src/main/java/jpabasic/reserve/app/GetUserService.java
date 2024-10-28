@@ -28,5 +28,4 @@ public class GetUserService {
             EMF.close();
         }
     }
-    
 }
