@@ -13,5 +13,6 @@ public class MainTableGenId {
     private static Logger logger = LoggerFactory.getLogger(MainTableGenId.class);
 
     public static void main(String[] args) {
-        
+
+    }
 }
