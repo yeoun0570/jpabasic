@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
+                https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+
+    <persistence-unit name="jpabegin" transaction-type="RESOURCE_LOCAL">
+        <class>jpabasic.employee.domain.Employee</class>
+        <class>jpabasic.reserve.domain.Hotel</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="jakarta.persistence.jdbc.url"
+                      value="jdbc:mysql://localhost/jpabegin?characterEncoding=utf8"/>
+            <property name="jakarta.persistence.jdbc.user" value="userjpa"/>
+            <property name="jakarta.persistence.jdbc.password" value="1234"/>
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+
+            <!--옵션(선택) 속성-->
+            <!--hibernate의 실행과정에서 console에 테이블 생성, DDL, DML 등 SQL문을 출력하도록 하는 설정-->
+            <!-- SQL 출력 상태 정렬-->
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.format_sql_comments" value="true"/>
+            <!-- 중요!!! 어플리케이션 싫애 시 DB테이블을자동으로 실행할 것인지??-->
+            <!--create : 기존에 테이블이 존재하면 삭제(drop) 후 새로 생성(create), DROP + CREATE-->
+            <!--update : DB테이블과 Entity (객체) 의 매핑(Mapping) 정보들 비교, 변경된 사항만 수정, 반영-->
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
+            <property name="hibernate.show_sql" value="true"/>
+
+            <property name="hibernate.hikari.poolName" value="pool"/>
+            <property name="hibernate.hikari.maximumPoolSize" value="10"/>
+            <property name="hibernate.hikari.minimumIdle" value="10"/>
+            <property name="hibernate.hikari.connectionTimeout" value="1000"/> <!-- 1s -->
+        </properties>
+    </persistence-unit>
+
+</persistence>
